@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Portfolio | Shreeja Balu (Dark Purple)</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #130f1c; /* Deep Dark Purple Base */
+    color: #f3f4f6; /* Light Gray Text */
+}
+
+/* Base Glassmorphism Style - Applied to Cards and Containers */
+.glass-card {
+    /* Using a dark purple/indigo base for the transparency tint */
+    background-color: rgba(45, 23, 68, 0.4); /* Dark Purple/Violet with 40% Transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.7); /* Deep shadow for floating effect */
+    border-radius: 1.5rem; /* Slightly more rounded */
+}
+        
+/* Dynamic Tab Buttons on Dark Background */
+.tab-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+        
+.tab-button.active {
+    background-color: #a855f7; /* Purple 500 */
+    color: #1f2937; /* Dark text on bright button */
+    font-weight: 700;
+    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.6); /* Stronger Purple Shadow */
+    transform: scale(1.05);
+}
+        
+        .tab-button:not(.active) {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #9ca3af; /* Dim text */
+        }
+
+        .tab-button:not(.active):hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #e5e7eb; /* Brighter on hover */
+            transform: translateY(-2px);
+        }
+        
+/* Enhanced Card Hover Effect (Applied to .glass-card) */
+.glass-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.glass-card:hover {
+    transform: translateY(-8px); /* Deeper lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(236, 72, 153, 0.7); /* Hot Pink glow effect */
+    border-color: #ec4899; /* Highlight border on hover (Pink) */
+}
+        
+        /* Neon effect for main CTA button */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 35px rgba(168, 85, 247, 0.8);
+        }
+        .cta-button:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 50px rgba(168, 85, 247, 1);
+            transform: scale(1.02);
+            background-color: #9333ea; /* Slightly darker purple on hover */
+        }
+    </style>
+</head>
+<body id="main-content">
+
+        <header class="glass-card sticky top-0 z-20 shadow-2xl rounded-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                        <h1 class="text-xl sm:text-3xl font-extrabold text-purple-400 tracking-wider">SHREEJA BALU // Content Writer</h1>
+            
+                        <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#about" class="text-gray-200 hover:text-pink-400 transition duration-300 hover:underline">Profile</a>
+                <a href="#skills" class="text-gray-200 hover:text-pink-400 transition duration-300 hover:underline">Expertise</a>
+                <a href="#projects" class="text-gray-200 hover:text-pink-400 transition duration-300 hover:underline">Experience</a>
+                <a href="#contact" class="text-gray-200 hover:text-pink-400 transition duration-300 hover:underline">Connect</a>
+            </nav>
+
+                        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+                <nav id="mobile-menu" class="hidden md:hidden glass-card p-4 border-t border-white/10">
+            <div class="flex flex-col space-y-3 font-medium text-center">
+                <a href="#about" class="block py-2 text-gray-200 hover:text-pink-400 transition duration-300 border-b border-white/5">Profile</a>
+                <a href="#skills" class="block py-2 text-gray-200 hover:text-pink-400 transition duration-300 border-b border-white/5">Expertise</a>
+                <a href="#projects" class="block py-2 text-gray-200 hover:text-pink-400 transition duration-300 border-b border-white/5">Experience</a>
+                <a href="#contact" class="block py-2 text-gray-200 hover:text-pink-400 transition duration-300">Connect</a>
+            </div>
+        </nav>
+    </header>
+
+        <section class="py-16 md:py-40 bg-gradient-to-br from-gray-900 to-indigo-950 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-20">
+            <div class="w-72 h-72 md:w-96 md:h-96 bg-purple-400 rounded-full mix-blend-overlay blur-3xl absolute top-5 -left-10 animate-pulse"></div>
+            <div class="w-64 h-64 md:w-80 md:h-80 bg-pink-400 rounded-full mix-blend-overlay blur-3xl absolute bottom-0 right-5 animate-pulse-slow"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="text-lg md:text-xl font-light mb-4 text-pink-300">Visual Communication & Digital Storytelling</p>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 md:mb-8 leading-tight drop-shadow-lg">
+                <span class="block">Concise, Engaging</span> 
+                <span class="text-purple-400">Content Writer.</span>
+            </h2>
+            <p class="text-lg md:text-2xl mb-10 md:mb-12 max-w-4xl mx-auto font-medium text-gray-200">
+                I craft messaging for **blogs, websites, and social media** to support brand objectives and drive clear communication.
+            </p>
+            <a href="#projects" class="cta-button inline-block px-8 py-4 md:px-12 md:py-5 bg-purple-500 text-gray-900 font-extrabold text-lg md:text-xl rounded-full transition duration-300 transform">
+                VIEW EXPERIENCE &rarr;
+            </a>
+        </div>
+    </section>
+
+        <section id="about" class="py-16 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-center mb-12 md:mb-16 text-white border-b-4 border-purple-500/50 inline-block px-4 pb-2 mx-auto">Profile Summary & Education</h3>
+            <div class="max-w-5xl mx-auto glass-card p-6 md:p-12 rounded-3xl">
+                <div class="md:flex md:space-x-12 items-start">
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-3 text-white">Professional Profile</h4>
+                        <p class="text-base md:text-lg leading-relaxed mb-6 text-gray-100">
+                            Driven and articulate **Content Writer** with a strong interest in digital communication. Skilled in crafting concise, engaging content for **blogs, websites, and social media**. Committed to supporting brand objectives through clear messaging and effective storytelling. I also bring strong skills in Client Management, Negotiation, and Strategic Account Management.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 mt-8 md:mt-0">
+                        <h4 class="text-2xl font-bold mb-3 text-white">Education</h4>
+                        <div class="p-6 bg-gray-900 text-pink-400 rounded-xl font-semibold text-center space-y-3 shadow-2xl border border-pink-500/30">
+                            <p class="text-lg">Bsc. Visual Communication</p>
+                            <p class="text-sm">SRM University</p>
+                            <p class="text-sm">2022 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="skills" class="py-16 md:py-28 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-center mb-12 md:mb-16 text-white border-b-4 border-pink-500/50 inline-block px-4 pb-2 mx-auto">Core Expertise</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="skill-card glass-card p-8 border-t-4 border-purple-500">
+                    <div class="text-4xl text-purple-400 mb-4">✍️</div>
+                    <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">Conversion-Focused Content</h4>
+                    <p class="text-gray-300">Crafting concise, engaging content for blogs, websites, and social media to drive brand awareness and action.</p>
+                </div>
+                                <div class="skill-card glass-card p-8 border-t-4 border-pink-500">
+                    <div class="text-4xl text-pink-400 mb-4">🎯</div>
+                    <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">Digital Marketing & Strategy</h4>
+                    <p class="text-gray-300">Fundamentals in digital strategy, account management, negotiation, and revenue growth/retention.</p>
+                </div>
+                                <div class="skill-card glass-card p-8 border-t-4 border-indigo-500">
+                    <div class="text-4xl text-indigo-400 mb-4">🧠</div>
+                    <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">Project Management & Teamwork</h4>
+                    <p class="text-gray-300">Strong Time Management, Leadership, and Effective Communication skills for seamless project execution.</p>
+                </div>
+            </div>
+
+                        <div class="mt-12 md:mt-16 max-w-4xl mx-auto">
+                <h4 class="text-xl md:text-2xl font-semibold mb-6 text-center text-gray-200">Digital Toolkit Proficiency & Languages</h4>
+                <div class="flex flex-wrap justify-center gap-3 text-sm font-medium">
+                    <span class="bg-purple-700/50 text-purple-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">Adobe Photoshop</span>
+                    <span class="bg-pink-700/50 text-pink-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">Adobe Lightroom</span>
+                    <span class="bg-indigo-700/50 text-indigo-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">Event Coordination/Logistics</span>
+                    <span class="bg-purple-700/50 text-purple-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">English (Fluent)</span>
+                    <span class="bg-pink-700/50 text-pink-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">Tamil (Fluent)</span>
+                    <span class="bg-indigo-700/50 text-indigo-200 px-4 py-1.5 rounded-full glass-card hover:scale-105 transition">Telugu (Fluent)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="projects" class="py-16 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-center mb-12 md:mb-16 text-white border-b-4 border-indigo-500/50 inline-block px-4 pb-2 mx-auto">Work Experience Highlights</h3>
+
+                        <div class="flex flex-wrap justify-center mb-8 md:mb-10 gap-2 md:gap-4">
+                <button data-category="all" class="tab-button px-4 py-2 text-sm md:px-6 md:py-3 rounded-full font-semibold">All Roles</button>
+                <button data-category="client" class="tab-button px-4 py-2 text-sm md:px-6 md:py-3 rounded-full font-semibold">Client Management</button>
+                <button data-category="event" class="tab-button px-4 py-2 text-sm md:px-6 md:py-3 rounded-full font-semibold">Event Coordination</button>
+                <button data-category="internship" class="tab-button px-4 py-2 text-sm md:px-6 md:py-3 rounded-full font-semibold">Internship</button>
+            </div>
+
+                        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            </div>
+
+        </div>
+    </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-gray-950/50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl md:text-4xl font-extrabold mb-4 text-pink-400">Let's Connect</h3>
+            <p class="text-lg md:text-xl mb-8 opacity-90 text-gray-200">I am available for content, digital communication, and event-related opportunities.</p>
+
+            <div class="space-y-4 mb-10">
+                <p class="text-xl md:text-3xl font-bold">Email: <a href="mailto:shreejabalu24@gmail.com" class="underline hover:text-purple-300 transition">shreejabalu24@gmail.com</a></p>
+                <p class="text-base md:text-xl text-gray-400">Phone: <a href="tel:9360664665" class="underline hover:text-purple-300 transition">9360664665</a></p>
+                <p class="text-base md:text-xl text-gray-400">LinkedIn: <a href="https://linkedin.com/in/shreeja-balu" target="_blank" class="underline hover:text-purple-300 transition">linkedin.com/in/shreeja-balu</a></p>
+            </div>
+
+                        <form class="mt-10 glass-card p-6 md:p-8 rounded-3xl border-t-4 border-pink-400">
+                <h4 class="text-xl md:text-2xl font-bold mb-6 text-white">Drop a Quick Inquiry</h4>
+                <input type="text" placeholder="Your Name" class="w-full p-3 md:p-4 mb-4 border-2 border-gray-700 rounded-lg bg-gray-900/50 text-white placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 transition">
+                <input type="email" placeholder="Your Work Email" class="w-full p-3 md:p-4 mb-4 border-2 border-gray-700 rounded-lg bg-gray-900/50 text-white placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 transition">
+                <textarea placeholder="Tell me about your project goals..." rows="5" class="w-full p-3 md:p-4 mb-6 border-2 border-gray-700 rounded-lg bg-gray-900/50 text-white placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 transition"></textarea>
+                <button type="submit" class="w-full py-3 md:py-4 bg-purple-500 text-gray-900 font-extrabold text-lg rounded-lg hover:bg-purple-600 transition duration-300 transform shadow-xl">
+                    LAUNCH INQUIRY
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+        <footer class="bg-gray-950 py-6 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2025 Shreeja Balu Content Portfolio. Visual Communication & Content Strategy.</p>
+    </footer>
+
+    <script>
+        // Data for the projects (Mapped from Work Experience)
+        const projects = [
+            { id: 1, title: 'Client Management & Negotiation (Digiskape)', category: 'client', icon: '🤝', description: 'Built and maintained strong client relationships. Drove sales, managed upsell opportunities, and executed strategies to maximize client value and retention.' },
+            { id: 2, title: 'Event Coordination & Logistics (ACTC Events)', category: 'event', icon: '🎤', description: 'Coordinated end-to-end logistics for large-scale events (e.g., ARR LIVE), ensuring smooth execution, vendor management, and client satisfaction.' },
+            { id: 3, title: 'Visual Storytelling & Editing (Fifth Angle Studios)', category: 'internship', icon: '📸', description: 'Assisted lead photographers on set, captured behind-the-scenes content for social media, and gained hands-on expertise with Adobe Lightroom & Photoshop for post-production.' },
+            
+        ];
+
+        const gridContainer = document.getElementById('projects-grid');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        /**
+         * Renders the project cards into the grid container.
+         * @param {Array<Object>} filteredProjects - The list of projects to render.
+         */
+        function renderProjects(filteredProjects) {
+            gridContainer.innerHTML = ''; // Clear existing projects
+            if (filteredProjects.length === 0) {
+                gridContainer.innerHTML = '<p class="col-span-3 text-center text-gray-500 text-xl py-10">No experience available for this category yet.</p>';
+                return;
+            }
+
+            filteredProjects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card glass-card p-6 md:p-8 border-l-4';
+                
+                // Set border color and tag based on category
+                let borderColor = 'border-purple-500';
+                let icon = '⚡';
+                let tagColor = 'text-purple-300 bg-purple-800/50';
+                let categoryLabel = '';
+
+                if (project.category === 'client') {
+                    borderColor = 'border-pink-500';
+                    icon = project.icon; // 🤝
+                    tagColor = 'text-pink-300 bg-pink-800/50';
+                    categoryLabel = 'Client Manager';
+                } else if (project.category === 'event') {
+                    borderColor = 'border-indigo-500';
+                    icon = project.icon; // 🎤
+                    tagColor = 'text-indigo-300 bg-indigo-800/50';
+                    categoryLabel = 'Event Coordinator';
+                } else if (project.category === 'internship') {
+                    borderColor = 'border-purple-500';
+                    icon = project.icon; // 📸
+                    tagColor = 'text-purple-300 bg-purple-800/50';
+                    categoryLabel = 'Internship';
+                }
+
+                card.classList.add(borderColor);
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">${icon}</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${tagColor}">${categoryLabel}</span>
+                    </div>
+                    <h4 class="text-xl md:text-2xl font-bold mb-3 text-white">${project.title}</h4>
+                    <p class="text-gray-300 mb-4 text-sm md:text-base">${project.description}</p>
+                    <a href="#" class="inline-flex items-center text-purple-400 font-bold hover:text-purple-200 transition duration-300 mt-2">
+                        View Details 
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                `;
+                gridContainer.appendChild(card);
+            });
+        }
+
+        /**
+         * Filters projects based on the selected category and updates the UI.
+         * @param {string} category - The category to filter by ('all', 'client', 'event', 'internship').
+         */
+        function filterProjects(category) {
+            // 1. Filter data
+            const filtered = category === 'all'
+                ? projects
+                : projects.filter(p => p.category === category);
+
+            // 2. Render filtered data
+            renderProjects(filtered);
+
+            // 3. Update active button state
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+                if (button.dataset.category === category) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        // --- Event Listeners and Initialization ---
+
+        // 1. Mobile Menu Toggle Logic
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+        
+        // 2. Project Filter Logic
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+                filterProjects(category);
+                // Close mobile menu if clicked from there (optional, but good UX)
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuIconOpen.classList.remove('hidden');
+                    menuIconClose.classList.add('hidden');
+                }
+            });
+        });
+        
+        // 3. FIX: Wait for the DOM content to load before running initialization logic
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Select and activate the 'All Work' button
+            const initialButton = document.querySelector('.tab-button[data-category="all"]');
+            if (initialButton) {
+                initialButton.classList.add('active');
+                filterProjects('all');
+            }
+        });
+        
+        // 4. Smooth scrolling for hash links on mobile menu items
+        document.querySelectorAll('#mobile-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Smooth scroll to section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close the menu after clicking a link
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
